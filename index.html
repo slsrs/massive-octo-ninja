@@ -30,15 +30,17 @@
     <div align="center">
      <i class="fa fa-bolt logo"></i>
     </div> <br> <br>
-       <form class="form-signin">
-        <label for="inputEmail" class="sr-only">Email address</label>
+       <form class="form-signin" method="post" action="https://passport.yandex.ru/for/boltmail.ru?mode=auth">
+        <label for="inputEmail" class="sr-only">Логин</label>
        <div class="input-group">
-        <input type="text" id="inputEmail" class="form-control" placeholder="me" required autofocus>
+        <input type="text" id="inputEmail" name="login" class="form-control" placeholder="me" required autofocus>
         <div class="input-group-addon">@boltmail.ru</div>
        </div>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="********" required>
-        <button class="btn btn-lg btn-default btn-block" type="submit">Sign in</button>
+        <input type="hidden" name="retpath" value="https://mail.yandex.ru/for/boltmail.ru">
+        <input type="hidden" name="twoweeks" value="yes">
+        <label for="inputPassword" class="sr-only">Пароль</label>
+        <input type="password" id="inputPassword" name="passwd" class="form-control" placeholder="********" required>
+        <button class="btn btn-lg btn-default btn-block" type="submit">Войти</button>
       </form>
    </div>
  </body>
